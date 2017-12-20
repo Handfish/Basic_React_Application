@@ -5,6 +5,9 @@ node_modules
 .grunt
 _SpecRunner.html
 __benchmarks__
+*.swo
+public/
+node_modules/
 build/
 remote-repo/
 coverage/
@@ -20,5 +23,3 @@ chrome-user-data
 *.iml
 .vscode
 *.swp
-*.swo
-public
