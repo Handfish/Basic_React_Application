@@ -6,7 +6,8 @@ node_modules
 _SpecRunner.html
 __benchmarks__
 *.swo
-public/
+public
+public/*
 node_modules/
 build/
 remote-repo/
