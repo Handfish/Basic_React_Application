@@ -6,6 +6,12 @@ import Options from './Options';
 import Action from './Action';
 import Header from './Header';
 
+//JSS
+import injectSheet from 'react-jss'
+import styles from './../styles/components/IndecisionApp.css.js'
+//import injectSheet, { jss } from 'react-jss'
+
+@injectSheet(styles)
 class IndecisionApp extends React.Component {
   state = {
     options: [],
@@ -72,25 +78,31 @@ class IndecisionApp extends React.Component {
     const title = "Indecision"
     const subtitle = "Put your decision in the hands of a react application"
 
+    //JSS
+    const {classes} = this.props;
+
     return (
-      <div>
-        <Header title={title} subtitle={subtitle}/>
-        <Action 
-          hasOptions={this.state.options.length > 0}
-          handlePick={this.handlePick}
-        />
-        <Options 
-          options={this.state.options}
-          handleDeleteOptions={this.handleDeleteOptions}
-          handleDeleteOption={this.handleDeleteOption}
-        />
-        <AddOption
-          handleAddOption={this.handleAddOption} 
-        />
-        <OptionModal 
-          selectedOption={this.state.selectedOption} 
-          handleClearSelectedOption={this.handleClearSelectedOption} 
-        />
+      <div className={classes.wrapper}>
+        <div className={classes.body}>
+          <Header title={title} subtitle={subtitle}/>
+          <Action 
+            hasOptions={this.state.options.length > 0}
+            handlePick={this.handlePick}
+          />
+          <Options 
+            options={this.state.options}
+
+            handleDeleteOptions={this.handleDeleteOptions}
+            handleDeleteOption={this.handleDeleteOption}
+          />
+          <AddOption
+            handleAddOption={this.handleAddOption} 
+          />
+          <OptionModal 
+            selectedOption={this.state.selectedOption} 
+            handleClearSelectedOption={this.handleClearSelectedOption} 
+          />
+        </div>
       </div>
     );
   }
