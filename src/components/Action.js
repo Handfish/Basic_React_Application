@@ -1,8 +1,11 @@
 import React from 'react';
+import injectSheet from 'react-jss'
+import styles from './../styles/components/Action.css.js'
 
 const Action = (props) => (
   <div>
     <button 
+      className={props.classes.bigButton}
       onClick={props.handlePick}
       disabled={!props.hasOptions} 
     >
@@ -11,4 +14,4 @@ const Action = (props) => (
   </div>
 );
 
-export default Action;
+export default injectSheet(styles)(Action);

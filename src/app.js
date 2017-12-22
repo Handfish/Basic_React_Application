@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import IndecisionApp from './components/IndecisionApp'
-import injectSheet, {ThemeProvider} from 'react-jss'
+import injectSheet, {jss, ThemeProvider} from 'react-jss'
 import theme from './styles/base/theme.css.js'
+import global from 'jss-global'
+import jssNested from 'jss-nested'
+import jssReset from 'jss-reset'
+
+jss.use(jssNested());
+jss.use(global());
+jss.createStyleSheet(jssReset).attach()
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>

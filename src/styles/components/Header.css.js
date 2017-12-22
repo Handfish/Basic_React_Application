@@ -1,12 +1,31 @@
 import theme from '../base/theme.css.js'
 
 const styles = theme => ({
+  container: theme.container,
+
+  header: {
+    "background": theme.offBlack,
+    "margin-bottom": theme.lSize,
+    color: "white",
+    padding: {
+      top: 10,
+      bottom: 10,
+      left: theme.mSize  
+    }
+  }, 
+
   h1: {
-    "font-size": '2.2rem'
+    "font-size": theme.lSize,
+    margin: 0
   },
+
   h2: {
-    "font-size": '1.8rem'
+    color: theme.offWhite,
+    "font-size": theme.mSize,
+    "font-weight": 500,
+    margin: 0
   }
 })
+
 
 export default styles;

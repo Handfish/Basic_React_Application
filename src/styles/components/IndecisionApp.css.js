@@ -1,13 +1,27 @@
 import theme from '../base/theme.css.js'
 
 const styles = theme => ({
-  wrapper: {
+  container: theme.container,
+
+  '@global html': {
     "font-size": "62.5%",
   },
-  body: {
+
+  '@global body': {
+    background: theme.darkBlue,
+  },
+
+  '@global button': {
+    'cursor': 'pointer',
+  },
+
+  '@global button:disabled': {
+    'cursor': 'default'
+  },
+
+  wrapper: {
     "font-family": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "font-size": "1.6rem",
-    color: 'green',
+    "font-size": theme.mSize,
   }
 })
 
