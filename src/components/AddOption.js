@@ -1,6 +1,7 @@
 import React from 'react';
 import injectSheet from 'react-jss'
 import styles from './../styles/components/AddOption.css.js'
+import classnames from 'classnames'
 
 @injectSheet(styles)
 export default class AddOption extends React.Component {
@@ -25,10 +26,10 @@ export default class AddOption extends React.Component {
 
     return (
       <div>
-        {this.state.error && <h4>{this.state.error}</h4>}
-        <form onSubmit={this.handleAddOption}>
-          <input type="text" name="option"/>
-          <button className={classes.button}>Add Option</button>
+        {this.state.error && <p className={classes.addOptionError}>{this.state.error}</p>}
+        <form className={classes.addOption} onSubmit={this.handleAddOption}>
+          <input className={classes.addOptionInput} type="text" name="option"/>
+          <button className={classnames(classes.button, classes.mediumFont)}> Add Option</button>
         </form>
       </div>
     );

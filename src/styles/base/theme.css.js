@@ -9,6 +9,8 @@ const offBlack = "#20222b";
 const offWhite = "#a5afd7";
 const darkBlue = "#333745";
 const purple = "#8357c5";
+const blue = "#3c4261";
+const lightBlue = "#464b5e";
 
 const theme = {
   //Colors
@@ -16,6 +18,8 @@ const theme = {
   offWhite: offWhite,
   darkBlue: darkBlue,
   purple: purple,
+  blue: blue,
+  lightBlue: lightBlue,
 
   //Sizes 
   sSize: sSize,
@@ -46,9 +50,14 @@ const theme = {
   buttonModLink: {
     background: "none",
     border: "none",
+    color: offWhite,
     padding: 0,
   },
   
+  mediumFont: {
+    "font-size": sSize
+  },
+
   largeFont: {
     "font-size": mSize
   }

@@ -19,6 +19,11 @@ const styles = theme => ({
     'cursor': 'default'
   },
 
+  widget: {
+    background: theme.lightBlue,
+    "margin-bottom": theme.xlSize
+  },
+
   wrapper: {
     "font-family": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
     "font-size": theme.mSize,

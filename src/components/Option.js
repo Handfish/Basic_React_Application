@@ -4,10 +4,10 @@ import styles from './../styles/components/Option.css.js'
 import classnames from 'classnames'
 
 const Option = (props) => (
-    <div>
-      {props.optionText}
+    <div className={props.classes.option}>
+      <p className={props.classes.optionText}>{props.count}. {props.optionText}</p>
       <button 
-        className={classnames(props.classes.button, props.classes.buttonModLink)}
+        className={classnames(props.classes.button, props.classes.buttonModLink, props.classes.mediumFont)}
         onClick={(e) => {
           props.handleDeleteOption(props.optionText) 
         }}

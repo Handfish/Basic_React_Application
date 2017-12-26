@@ -9,7 +9,6 @@ import Header from './Header';
 //JSS
 import injectSheet from 'react-jss'
 import styles from './../styles/components/IndecisionApp.css.js'
-//import injectSheet, { jss } from 'react-jss'
 
 @injectSheet(styles)
 class IndecisionApp extends React.Component {
@@ -90,15 +89,17 @@ class IndecisionApp extends React.Component {
               hasOptions={this.state.options.length > 0}
               handlePick={this.handlePick}
             />
-            <Options 
-              options={this.state.options}
+            <div className={classes.widget}>
+              <Options 
+                options={this.state.options}
 
-              handleDeleteOptions={this.handleDeleteOptions}
-              handleDeleteOption={this.handleDeleteOption}
-            />
-            <AddOption
-              handleAddOption={this.handleAddOption} 
-            />
+                handleDeleteOptions={this.handleDeleteOptions}
+                handleDeleteOption={this.handleDeleteOption}
+              />
+              <AddOption
+                handleAddOption={this.handleAddOption} 
+              />
+            </div>
             <OptionModal 
               selectedOption={this.state.selectedOption} 
               handleClearSelectedOption={this.handleClearSelectedOption} 
